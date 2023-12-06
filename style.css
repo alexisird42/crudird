@@ -4,96 +4,99 @@
     padding: 0;
 }
 
-html, body {
+body {
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
-    background-image: url('nelson-ndongala-KyS_6cabH4s-unsplash.jpg'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-}
-a{
-    text-decoration: none;
+    background: linear-gradient(to bottom right, #FF6B6B, #6B66FF);
+    color: #fff;
 }
 
-.users-form form{
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.users-form form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    width: 30%;
-    margin: 20px auto;
-    text-align: center;
+    gap: 16px;
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #FFB86B, #8D66FF);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.users-form form input{
-    font-family: 'Segoe UI', sans-serif;
-}
-
-.users-form form input[type=text],
-.users-form form input[type=password],
-.users-form form input[type=email]{
-    padding: 8px;
-    border:2px solid #aaa;
-    border-radius:4px;
-    outline:none;
-    transition:.3s;
+.users-form form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
 .users-form form input[type=text]:focus,
 .users-form form input[type=password]:focus,
-.users-form form input[type=password]:focus{
-    border-color:dodgerBlue;
-    box-shadow:0 0 6px 0 dodgerBlue;
+.users-form form input[type=password]:focus {
+    border-color: #FF6B6B;
 }
 
-.users-form form input[type=submit]{
+.users-form form input[type=submit] {
     border: none;
-    padding: 12px 50px;
+    padding: 12px;
     text-decoration: none;
-    transition-duration: 0.4s;
+    transition: background-color 0.4s;
     cursor: pointer;
     border-radius: 5px;
-    background-color: white; 
-    color: black; 
-    border: 2px solid #60a100;
+    background: #57B894;
+    color: #fff;
 }
 
 .users-form form input[type=submit]:hover {
-    background-color: #60a100;
-    color: white;
+    background: #3F8D5B;
 }
 
-.users-table table{
-    border: 1px solid #ccc;
+.users-table table {
+    border: 1px solid #ddd;
     border-collapse: collapse;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    table-layout: fixed;
+    margin: 20px auto;
+    width: 80%;
 }
 
 table tr {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    padding: 4px;
+    background-color: #f3a8e0;
+    border: 1px solid #000000;
+    padding: 12px;
+    transition: background-color 0.3s;
 }
 
-table th{
-    padding: 16px;
+table tr:hover {
+    background-color: #f0f0f0;
+}
+
+table th, table td {
+    padding: 12px;
     text-align: center;
     font-size: .85em;
 }
 
-.users-table--edit{
-    background: #009688;
-    padding: 6px;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
+.users-table--edit,
+.users-table--delete {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-.users-table--delete{
-    background: #b11e1e;
-    padding: 6px;
+
+.users-table--edit {
+    background: #FFD166;
+    color: #ffffff;
+}
+
+.users-table--delete {
+    background: #EF476F;
     color: #fff;
-    text-align: center;
-    font-weight: bold;
 }
